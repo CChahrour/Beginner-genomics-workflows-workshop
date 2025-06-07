@@ -13,20 +13,8 @@ This repository is designed for **complete beginners** in high-performance compu
 - Handy **bash commands** for navigating Unix systems
 - Running workflows using **Snakemake**
 - Using **GNU Screen** for remote session management
-- Reproducible analysis with **SeqNado** (ChIP-seq, ATAC-seq, RNA-seq, SNPs)
+- Reproducible analysis with **SeqNado** 
 
----
-
-## 📂 Repository Structure
-
-```bash
-.
-├── conda_env/                # Conda environment files
-├── profile/                  # Snakemake SLURM profiles
-├── Snakefile                 # Example workflow file
-├── example.sh               # Sample SLURM batch script
-└── snakemake.zip            # Downloadable archive with all workflow scripts
-```
 
 ---
 
@@ -72,9 +60,35 @@ less hello_XXXXXXX.out
 
 ## 🧬 Snakemake Basics
 
-To run the workflow:
+To get the full files:
 
 ```bash
+wget https://datashare.molbiol.ox.ac.uk/public/project/milne_group/cchahrou/GMS/snakemake.zip
+```
+
+Unzip them:
+
+```bash
+unzip snakemake.zip
+```
+
+Change directory 
+
+```bash
+cd snakemake
+```
+
+Create and activate the conda environment
+
+```bash
+conda env create -f conda_env/gms_cluster.yml
+```
+
+Run the workflow in a screen:
+
+```bash
+screen –S cluster
+source activate gms_cluster
 snakemake -s Snakefile --cores 1 --profile profile/slurm --slurm -j 2
 ```
 
