@@ -1,0 +1,12 @@
+import pandas
+samples_df=pandas.read_csv("samples.csv")
+SAMPLES=samples_df.samples
+
+include: "rules/qc.smk"
+
+rule all:
+    input:
+        reports=expand(["output/{sample}_1_fastqc.html", "output/{sample}_2_fastqc.html"], sample=SAMPLES),
+        # multiqc="output/multiqc_report_raw.html",
+        
+        
