@@ -28,21 +28,21 @@ This repository is designed for **complete beginners** in high-performance compu
 
 ## 🧪 Quick Start
 
-### 1. Clone the repository
+Clone the repository
 
 ```bash
 git clone https://github.com/CChahrour/Beginner-genomics-workflows-workshop.git
 cd Beginner-genomics-workflows-workshop
 ```
 
-### 2. Set up the environment
+Set up the environment
 
 ```bash
 conda env create -f conda_env/gms_cluster.yml
 conda activate gms_cluster
 ```
 
-### 3. Run an example job on BMRC
+Run an example job on BMRC
 
 ```bash
 screen -S cluster
@@ -78,17 +78,10 @@ Change directory
 cd snakemake
 ```
 
-Create and activate the conda environment
-
-```bash
-conda env create -f conda_env/gms_cluster.yml
-```
-
 Run the workflow in a screen:
 
 ```bash
 screen –S cluster
-source activate gms_cluster
 snakemake -s Snakefile --cores 1 --profile profile/slurm --slurm -j 2
 ```
 
