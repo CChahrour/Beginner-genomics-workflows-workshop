@@ -105,6 +105,6 @@ More: [Snakemake docs](https://snakemake.readthedocs.io)
 
 ## 📅 Originally Delivered
 
-🗓️ **2022-2024**  
+🗓️ **2022-2025**  
 🏛️ **University of Oxford – GMS DPhil Training**  
 👩‍🏫 *Instructor: Catherine Chahrour*  
